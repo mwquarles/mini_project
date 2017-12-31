@@ -1,0 +1,20 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "csvUpload",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20171231024057",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "data_upload",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

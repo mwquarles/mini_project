@@ -1,0 +1,16 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "dataRecord",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171231024319",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "data_upload_record",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

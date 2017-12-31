@@ -1,0 +1,29 @@
+
+<div *ngIf="dataUpload">
+    <h2><span>Data Upload</span> {{dataUpload.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Csv Upload</span></dt>
+        <dd>
+            <div *ngIf="dataUpload.csvUpload">
+                <a (click)="openFile(dataUpload.csvUploadContentType, dataUpload.csvUpload)">open</a>
+                {{dataUpload.csvUploadContentType}}, {{byteSize(dataUpload.csvUpload)}}
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'data-upload/'+ dataUpload.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
