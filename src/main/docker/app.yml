@@ -1,0 +1,14 @@
+version: '2'
+services:
+    mini_project-app:
+        image: mini_project
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mini_project-mysql:3306/mini_project?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    mini_project-mysql:
+        extends:
+            file: mysql.yml
+            service: mini_project-mysql
