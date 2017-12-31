@@ -46,8 +46,8 @@ public class DataUploadService {
         List<String> recordList = Arrays.asList(csvString.split("\\r?\\n"));
 
         /*
-        Create record for each item in list and save
-        TODO figure out how to add columns from CSV headers - ignore for now
+        * Create record for each item in list and save
+        * TODO figure out how to add columns from CSV headers - ignore for now
         */
 
         for (int i = 1; i < recordList.size(); i++) {
@@ -98,6 +98,7 @@ public class DataUploadService {
      * Delete the dataUpload by id.
      *
      * @param id the id of the entity
+     * TODO add deletion for records
      */
     public void delete(Long id) {
         log.debug("Request to delete DataUpload : {}", id);
